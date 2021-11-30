@@ -21,7 +21,6 @@ class UserController extends Controller
 
     public function index()
     {
-
         $userId = \DB::table('role_user')->get()->pluck('user_id');
         $users = User::find($userId);
 
