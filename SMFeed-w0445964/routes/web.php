@@ -17,7 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/{id}', 'HomeController@show')->name('home.show');
+
 
 Route::resource('/roles', 'RoleController');
 Route::resource('/posts', 'PostController');
@@ -30,4 +33,6 @@ Route::get('/admin/users/{users}', 'UserController@show');
 Route::get('/admin/users/{user}/edit', 'UserController@edit');
 Route::patch('/admin/users/{user}/', 'UserController@update');
 Route::delete('/admin/users/{user}/', 'UserController@destroy');
+
+
 
