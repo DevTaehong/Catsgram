@@ -17,7 +17,7 @@ class EnforceHttps
     {
         //check to see if the incoming request is coming over http or https
        if(!$request->secure()){
-           return redirect()->secure($request->getUriForPath());
+           return redirect()->secure($request->getRequestUri());
        }
 
         return $next($request);
