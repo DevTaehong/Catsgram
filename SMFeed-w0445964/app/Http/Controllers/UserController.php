@@ -12,6 +12,7 @@ class UserController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('IsAdmin')->only('index');
     }
     /**
      * Display a listing of the resource.
@@ -25,6 +26,8 @@ class UserController extends Controller
         $users = User::find($userId);
 
         return view('admin.index', compact('users'));
+
+
     }
 
     /**
@@ -121,7 +124,6 @@ class UserController extends Controller
 
         $user = User::findOrFail($id);
 
-        // Source Code: https://stackoverflow.com/questions/24109535/how-to-update-column-value-in-laravel
         if($user){
             $user->deleted_by = $deletedById;
             $user->save();

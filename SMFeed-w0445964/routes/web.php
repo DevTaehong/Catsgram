@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/', 'HomeController@index');
 
 Auth::routes();
 
@@ -21,9 +22,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/{id}', 'HomeController@show')->name('home.show');
 
+//Route::group(['middleware' => 'IsAdmin'], function () {
+//    Route::get('/admin/users', 'UserController@index');
+//});
+
 
 Route::resource('/roles', 'RoleController');
-Route::resource('/posts', 'PostController');
 Route::resource('/users', 'UserController');
 
 Route::get('/admin/users', 'UserController@index');
@@ -34,5 +38,8 @@ Route::get('/admin/users/{user}/edit', 'UserController@edit');
 Route::patch('/admin/users/{user}/', 'UserController@update');
 Route::delete('/admin/users/{user}/', 'UserController@destroy');
 
+Route::resource('/posts', 'PostController');
+Route::patch('/posts/{post}/', 'PostController@update');
+Route::delete('/posts/{post}/', 'PostController@destroy');
 
 

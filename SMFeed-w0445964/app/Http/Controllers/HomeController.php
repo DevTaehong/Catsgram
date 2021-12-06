@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Post;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -13,8 +14,9 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+//        $this->middleware('auth'); // It's just a function
 //        $this->middleware('IsLegalAge')->only('index');
+
     }
 
     /**
@@ -22,8 +24,22 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function index(Post $posts)
     {
-        return view('home');
+        $posts = Post::orderBy('created_at', 'desc')->get();
+
+        $id = Auth::id();
+        $roleId = \DB::table('role_user')->where('id', $id)->get();
+        $moderatorId = \DB::table('roles')->where('id', 2)->get();
+
+
+        return view('home', compact('posts', 'id', 'roleId', 'moderatorId'));
     }
 }

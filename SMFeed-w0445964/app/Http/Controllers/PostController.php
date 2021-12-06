@@ -24,7 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('post.create');
     }
 
     /**
@@ -35,7 +35,16 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+            'title' => 'required',
+            'content' => 'required'
+        ]);
+
+        $data['created_by'] = auth()->user()->id;
+        Post::create($data);
+
+
+        return redirect('/home');
     }
 
     /**
@@ -46,7 +55,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+
     }
 
     /**
@@ -57,7 +66,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('/post/edit', compact('post'));
     }
 
     /**
@@ -69,7 +78,14 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+
+        $post->update(request()->validate([
+            'title' => 'required',
+            'content' => 'required'
+        ]));
+
+
+        return redirect('/home');
     }
 
     /**
@@ -80,6 +96,18 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $deletedById = auth()->user()->id;
+
+
+        // Source Code: https://stackoverflow.com/questions/24109535/how-to-update-column-value-in-laravel
+
+        $post->deleted_by = $deletedById;
+        $post->save();
+
+
+        $post->delete();
+
+
+        return redirect('/home');
     }
 }

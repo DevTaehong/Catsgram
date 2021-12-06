@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\App;
 
 class EnforceHttps
 {
@@ -16,7 +17,7 @@ class EnforceHttps
     public function handle($request, Closure $next)
     {
         //check to see if the incoming request is coming over http or https
-       if(!$request->secure()){
+       if(App::environment('production') && !$request->secure()){
            return redirect()->secure($request->getRequestUri());
        }
 

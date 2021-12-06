@@ -20,7 +20,6 @@ class CreatePostsTable extends Migration
             $table->unsignedBigInteger('created_by');
             $table->unsignedBigInteger('deleted_by')->nullable();
             $table->timestamps();
-            $table->timestamp('deleted_at')->nullable();
 
             $table->foreign('created_by')->references('id')->on('users');
             $table->foreign('deleted_by')->references('id')->on('users');

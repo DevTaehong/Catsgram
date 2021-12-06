@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\IsAdmin;
 use App\Http\Middleware\IsNSLCLegalAge;
 
 return [
@@ -228,7 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'IsLegalAge' => IsNSLCLegalAge::class,
-
+        'IsAdmin' => IsAdmin::class,
     ],
 
 ];
