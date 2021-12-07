@@ -42,10 +42,6 @@ class User extends Authenticatable
 
     protected  $guarded = [];
 
-    public function setPasswordAttribute($password)
-    {
-        $this->attributes['password'] = Hash::make($password);
-    }
 
     public function roles()
     {

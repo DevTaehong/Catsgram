@@ -26,8 +26,6 @@ class UserController extends Controller
         $users = User::find($userId);
 
         return view('admin.index', compact('users'));
-
-
     }
 
     /**

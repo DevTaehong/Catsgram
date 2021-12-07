@@ -51,6 +51,7 @@
                                 </li>
                             @endif
                         @else
+                            <li><a class="nav-link" href="/themes">Manage Themes</a></li>
                             <li><a class="nav-link" href="/home">Manage Posts</a></li>
                             <li><a class="nav-link" href="/admin/users">Manage Users</a></li>
 

@@ -22,12 +22,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/{id}', 'HomeController@show')->name('home.show');
 
-//Route::group(['middleware' => 'IsAdmin'], function () {
-//    Route::get('/admin/users', 'UserController@index');
-//});
+Route::group(['middleware' => 'IsAdmin'], function () {
+    Route::get('/admin/users', 'UserController@index');
+});
 
 
-Route::resource('/roles', 'RoleController');
+Route::resource('/themes', 'ThemeController');
 Route::resource('/users', 'UserController');
 
 Route::get('/admin/users', 'UserController@index');

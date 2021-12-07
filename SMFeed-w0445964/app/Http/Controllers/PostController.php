@@ -47,16 +47,6 @@ class PostController extends Controller
         return redirect('/home');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Post $post)
-    {
-
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -78,12 +68,10 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-
         $post->update(request()->validate([
             'title' => 'required',
             'content' => 'required'
         ]));
-
 
         return redirect('/home');
     }
@@ -98,15 +86,11 @@ class PostController extends Controller
     {
         $deletedById = auth()->user()->id;
 
-
         // Source Code: https://stackoverflow.com/questions/24109535/how-to-update-column-value-in-laravel
-
         $post->deleted_by = $deletedById;
         $post->save();
 
-
         $post->delete();
-
 
         return redirect('/home');
     }
