@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Theme;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cookie;
 
 class HomeController extends Controller
 {
@@ -31,7 +34,7 @@ class HomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function index(Post $posts)
+    public function index(Post $posts, Request $request)
     {
         $posts = Post::orderBy('created_at', 'desc')->get();
 
@@ -39,7 +42,14 @@ class HomeController extends Controller
         $roleId = \DB::table('role_user')->where('id', $id)->get();
         $moderatorId = \DB::table('roles')->where('id', 2)->get();
 
+        $themes = Theme::all();
 
-        return view('home', compact('posts', 'id', 'roleId', 'moderatorId'));
+
+//        $value = $request->cookie('name3');
+        $value = $request->cdn_url;
+        Cookie::queue(Cookie::make('name1', $value, 20));
+
+
+        return view('home', compact('posts', 'id', 'roleId', 'moderatorId', 'themes', 'value'));
     }
 }

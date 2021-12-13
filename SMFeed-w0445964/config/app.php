@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\IsAdmin;
 use App\Http\Middleware\IsNSLCLegalAge;
+use App\Http\Middleware\isThemeManager;
 
 return [
 
@@ -229,6 +230,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'IsAdmin' => IsAdmin::class,
+        'isThemeManager' => isThemeManager::class
     ],
 
 ];

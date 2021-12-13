@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ThemeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('isThemeManager')->only('index');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -108,5 +113,14 @@ class ThemeController extends Controller
         $theme->delete();
 
         return redirect('/themes');
+    }
+
+    public function assignTheme(Request $request)
+    {
+        if (!session('theme'))
+        {
+            $theme = Theme::where('id', 1)->value('cdn_url');
+            session(['theme' => $theme]);
+        }
     }
 }

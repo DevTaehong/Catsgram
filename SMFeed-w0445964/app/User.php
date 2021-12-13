@@ -53,6 +53,21 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
+    public function themes()
+    {
+        return $this->hasMany(Theme::class);
+    }
+
+    public function isThemeManager($name)
+    {
+        foreach ($this->roles as $role)
+        {
+            if ($role->name == $name)
+                return true;
+        }
+
+        return false;
+    }
 
 
 }

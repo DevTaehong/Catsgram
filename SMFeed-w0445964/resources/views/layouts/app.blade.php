@@ -20,6 +20,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ request()->cookie('name1') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -34,10 +35,17 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
+                    <div class="form-group">
+                        <form>
+                            <select name="cdn_url" id="cdn_url" class="form-control" onchange="this.form.submit()">
+                                <option value="{{ asset('css/app.css') }}">Default</option>
+                                @foreach(\App\Theme::all() as $theme)
+                                    <option value="{{ $theme->cdn_url }}">{{ $theme->name }}</option>
+                                @endforeach
+                            </select>
+                            <noscript><input type="submit" value="Submit"></noscript>
+                        </form>
+                    </div>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -51,7 +59,10 @@
                                 </li>
                             @endif
                         @else
+                            {{--Source code: https://stackoverflow.com/questions/30712420/displaying-navbar-according-to-user-roles-and-permisions-laravel--}}
+                            @if (Auth::user()->isThemeManager('Theme Manager'))
                             <li><a class="nav-link" href="/themes">Manage Themes</a></li>
+                            @endif
                             <li><a class="nav-link" href="/home">Manage Posts</a></li>
                             <li><a class="nav-link" href="/admin/users">Manage Users</a></li>
 
