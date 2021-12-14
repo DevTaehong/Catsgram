@@ -22,7 +22,7 @@
             },
             "require": {
                 "composer-plugin-api": "^1.1.0 || ^2.0",
-                "php": "^8.0.*"
+                "php": "8.0.*"
             },
             "replace": {
                 "ocramius/package-versions": "1.11.99"
