@@ -30,6 +30,8 @@ interface ExtractorInterface
 
     /**
      * Sets the prefix that should be used for new found messages.
+     *
+     * @param string $prefix The prefix
      */
-    public function setPrefix(string $prefix);
+    public function setPrefix($prefix);
 }

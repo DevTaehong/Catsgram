@@ -31,8 +31,10 @@ class ExecutableFinder
 
     /**
      * Adds new possible suffix to check for executable.
+     *
+     * @param string $suffix
      */
-    public function addSuffix(string $suffix)
+    public function addSuffix($suffix)
     {
         $this->suffixes[] = $suffix;
     }
@@ -44,9 +46,9 @@ class ExecutableFinder
      * @param string|null $default   The default to return if no executable is found
      * @param array       $extraDirs Additional dirs to check into
      *
-     * @return string|null
+     * @return string|null The executable path or default value
      */
-    public function find(string $name, string $default = null, array $extraDirs = [])
+    public function find($name, $default = null, array $extraDirs = [])
     {
         if (ini_get('open_basedir')) {
             $searchPath = array_merge(explode(\PATH_SEPARATOR, ini_get('open_basedir')), $extraDirs);
