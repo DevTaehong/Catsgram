@@ -2,13 +2,11 @@
 
 namespace App\Exceptions;
 
-use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
 class Handler extends ExceptionHandler
 {
-
     /**
      * A list of exception types with their corresponding custom log levels.
      *
@@ -28,7 +26,7 @@ class Handler extends ExceptionHandler
     ];
 
     /**
-     * A list of the inputs that are never flashed for validation exceptions.
+     * A list of the inputs that are never flashed to the session on validation exceptions.
      *
      * @var array<int, string>
      */
@@ -49,9 +47,4 @@ class Handler extends ExceptionHandler
             //
         });
     }
-
-    public function report(Throwable $exception){}
-    public function shouldReport(Throwable $exception){}
-    public function render($request, Throwable $exception){}
-    public function renderForConsole($output, Throwable $exception){}
 }

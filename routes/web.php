@@ -14,6 +14,8 @@
 //Route::get('/', function () {
 //    return view('welcome');
 //});
+use Illuminate\Support\Facades\Auth;
+
 Route::get('/', 'HomeController@index');
 
 
