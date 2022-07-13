@@ -18,6 +18,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        //source: https://just1and0.medium.com/how-to-setup-database-on-heroku-for-your-laravel-application-6a903c2c75c7
         Schema::defaultStringLength(191);
     }
 
