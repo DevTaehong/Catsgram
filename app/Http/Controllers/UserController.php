@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Role;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -17,14 +21,12 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Application|Factory|View
      */
 
     public function index()
     {
-        $userId = \DB::table('role_user')->get()->pluck('user_id');
-        $users = User::find($userId);
-
+        $users = User::all();
         return view('admin.index', compact('users'));
     }
 
