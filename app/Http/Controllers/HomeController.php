@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use App\Theme;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -39,8 +41,8 @@ class HomeController extends Controller
         $posts = Post::orderBy('created_at', 'desc')->get();
 
         $id = Auth::id();
-        $roleId = \DB::table('role_user')->where('id', $id)->get();
-        $moderatorId = \DB::table('roles')->where('id', 2)->get();
+        $roleId = DB::table('role_user')->where('id', $id)->get();
+        $moderatorId = DB::table('roles')->where('id', 2)->get();
 
         $themes = Theme::all();
 
@@ -49,7 +51,8 @@ class HomeController extends Controller
         $value = $request->cdn_url;
         Cookie::queue(Cookie::make('name1', $value, 20));
 
+        $users = User::with('roles')->get();
 
-        return view('home', compact('posts', 'id', 'roleId', 'moderatorId', 'themes', 'value'));
+        return view('home', compact('posts', 'id', 'roleId', 'moderatorId', 'themes', 'value', 'users'));
     }
 }

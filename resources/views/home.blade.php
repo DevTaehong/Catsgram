@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Welcome to the Media Feed!</div>
+                <div class="card-header">Welcome to the Quotes App!</div>
                 @if(\Illuminate\Support\Facades\Auth::check())
                     <a href="posts/create" class="btn btn-dark">Create New Post</a>
                 @endif
@@ -20,7 +20,11 @@
                     <ul class="list-group">
                         @foreach($posts as $post)
                             <li class="list-group-item">
-                                <h7>Posted {{ $post->created_at }}</h7>
+                                @foreach($users as $user)
+                                    @if($user->id == $post->created_by)
+                                        <h7>Posted by {{ $user->name }} on {{ $post->created_at->format("D M. d, Y H:i") }}</h7>
+                                    @endif
+                                @endforeach
                                 <h4>{{ $post->title }}</h4>
                                 <div class="mt-2">
                                     <p>
