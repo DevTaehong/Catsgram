@@ -24,5 +24,9 @@ class Post extends Model
         return url('/posts/' . $this->id);
     }
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class)->whereNull('parent_id');
+    }
 
 }

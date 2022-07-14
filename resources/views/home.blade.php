@@ -21,24 +21,44 @@
                         </div>
                     @endif
 
-                    <ul class="list-group">
-                        @foreach($posts as $post)
-                            <li class="list-group-item">
-                                @foreach($users as $user)
-                                    @if($user->id == $post->created_by)
-                                        <h7>Posted by {{ $user->name }} on {{ $post->created_at->format("D M. d, Y H:i") }}</h7>
-                                    @endif
-                                @endforeach
-                                <h4>{{ $post->title }}</h4>
-                                <div class="mt-2">
-                                    <p>
-                                        {{ $post->content }}
-                                    </p>
+
+                    @foreach($posts as $post)
+                        <div class="card m-3">
+                            <div class="card-header">{{ $post->title }}</div>
+                            <div class="m-3">{{ $post->content }}</div>
+                            @foreach($users as $user)
+                                @if($user->id == $post->created_by)
+                                    <small class="ml-3">
+                                        Posted by {{ $user->name }}
+                                        {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}
+                                    </small>
+                                @endif
+                            @endforeach
+
+                            <div class="col-md">
+                                <hr />
+                                <h4>Display Comments</h4>
+                                <hr />
+                            </div>
+                            @include('post.commentsDisplay', ['comments' => $post->comments, 'post_id' => $post->id])
+                            <h4 class="col-md">Add comment</h4>
+                            <form method="post" action="{{ route('comments.store'   ) }}">
+                                @csrf
+                                <div class="col-md">
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="body"></textarea>
+                                        <input type="hidden" name="post_id" value="{{ $post->id }}" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-success" value="Add Comment" />
+                                    </div>
                                 </div>
+                            </form>
+
+                            <div class="d-flex justify-content-center mb-3">
                                 @if($post->created_by == $id)
                                     <a class="btn btn-warning" href="{{ route('posts.edit',$post->id) }}">Edit</a>
                                 @endif
-
                                 @if($post->created_by == $id or
                                     implode(', ', $moderatorId->pluck('id')->toArray()) ==
                                     (implode(', ', $roleId->pluck('role_id')->toArray())))
@@ -48,9 +68,9 @@
                                         <button type="submit" class="btn btn-danger">Delete</button>
                                     </form>
                                 @endif
-                            </li>
-                        @endforeach
-                    </ul>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
 
