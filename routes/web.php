@@ -45,4 +45,5 @@ Route::resource('/posts', 'PostController');
 Route::patch('/posts/{post}/', 'PostController@update');
 Route::delete('/posts/{post}/', 'PostController@destroy');
 
-
+Route::post('/comments/store', 'CommentController@store');
+Route::resource('/comments', 'CommentController');
