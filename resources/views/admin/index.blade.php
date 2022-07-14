@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="card">
             <div class="card-header">User Administration</div>
-            <a href="/admin/users/create" class="btn btn-dark">Create new Admin User</a>
+                <div class="mt-3"><a href="/admin/users/create" class="btn btn-dark" style="float: left; margin-left:20px">Create New Admin User</a></div>
             <div class="card-body">
                 <table class="table">
                     <thead>
