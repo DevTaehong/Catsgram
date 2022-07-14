@@ -5,7 +5,9 @@
     <div class="row justify-content-center">
         <div class="card">
             <div class="card-header">Manage Themes</div>
-            <a href="/themes/create" class="btn btn-dark">Add New Theme</a>
+            <div class="mt-3">
+                <a href="/themes/create" class="btn btn-dark" style="float: left; margin-left:20px">Add New Theme</a>
+            </div>
             <div class="card-body">
                 <table class="table">
                     <thead>

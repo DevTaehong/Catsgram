@@ -8,7 +8,11 @@
             <div class="card">
                 <div class="card-header">Welcome to the Quotes App!</div>
                 @if(\Illuminate\Support\Facades\Auth::check())
-                    <a href="posts/create" class="btn btn-dark">Create New Post</a>
+                    <div class="mt-3">
+                        <a href="posts/create" class="btn btn-dark" style="float: left; margin-left:20px">
+                            Create New Post
+                        </a>
+                    </div>
                 @endif
                 <div class="card-body">
                     @if (session('status'))
