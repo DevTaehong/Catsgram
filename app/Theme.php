@@ -12,6 +12,7 @@ class Theme extends Model
     use SoftDeletes;
 
     protected  $guarded = [];
+    protected $fillable = ['created_by'];
 
     public function user()
     {
