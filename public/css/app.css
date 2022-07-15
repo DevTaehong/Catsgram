@@ -11,6 +11,11 @@ form + form {
   display: inline-block;
   transform:translate(100%,-100%);
 }
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
 :root {
   --blue: #3490dc;
   --indigo: #6574cd;
