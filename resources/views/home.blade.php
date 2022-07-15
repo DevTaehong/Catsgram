@@ -24,7 +24,7 @@
                         <div class="card m-3">
                             <div class="card-header">{{ $post->title }}</div>
                             @if($post->image != null)
-                                <img class="m-3" src="{{url('/images')}}/{{ $post->image }}" alt="Image" width="500"/>
+                                <img class="responsive" src="{{url('/images')}}/{{ $post->image }}" alt="Image"/>
                             @endif
 
                             @foreach($users as $user)
