@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Changing favicon">
+    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Making responsive images">
+      <change afterPath="$PROJECT_DIR$/public/images/24-2.1abouthalifaxnovascotia-header.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +238,7 @@
       <workItem from="1657746572003" duration="390000" />
       <workItem from="1657746981511" duration="191000" />
       <workItem from="1657747190809" duration="375000" />
-      <workItem from="1657747599578" duration="39066000" />
+      <workItem from="1657747599578" duration="40431000" />
     </task>
     <task id="LOCAL-00001" summary="Changing minor issues">
       <created>1657308095422</created>
@@ -464,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657849933244</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Making responsive images">
+      <created>1657851332740</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1657851332740</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +503,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Deleting vender dir" />
     <MESSAGE value="Changing .gitignore" />
     <MESSAGE value="Changing php version in composer.json" />
     <MESSAGE value="Tyring to fix deployment on heroku" />
@@ -521,6 +527,7 @@
     <MESSAGE value="Trying to fix a migration issue 2" />
     <MESSAGE value="Changing minor issues on Heroku" />
     <MESSAGE value="Changing favicon" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing favicon" />
+    <MESSAGE value="Making responsive images" />
+    <option name="LAST_COMMIT_MESSAGE" value="Making responsive images" />
   </component>
 </project>
