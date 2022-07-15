@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Changing Procfile to fix a migration issue on Heroku" />
+    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Trying to fix a migration issue" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -234,7 +234,7 @@
       <workItem from="1657746572003" duration="390000" />
       <workItem from="1657746981511" duration="191000" />
       <workItem from="1657747190809" duration="375000" />
-      <workItem from="1657747599578" duration="35246000" />
+      <workItem from="1657747599578" duration="35935000" />
     </task>
     <task id="LOCAL-00001" summary="Changing minor issues">
       <created>1657308095422</created>
@@ -432,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657846807298</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Trying to fix a migration issue">
+      <created>1657847273939</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1657847273939</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,6 +494,7 @@
     <MESSAGE value="Trying to fix foreign key issue on Heroku" />
     <MESSAGE value="Changing Procfile" />
     <MESSAGE value="Changing Procfile to fix a migration issue on Heroku" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing Procfile to fix a migration issue on Heroku" />
+    <MESSAGE value="Trying to fix a migration issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix a migration issue" />
   </component>
 </project>
