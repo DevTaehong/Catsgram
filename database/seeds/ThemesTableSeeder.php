@@ -15,7 +15,7 @@ class ThemesTableSeeder extends Seeder
         DB::table('themes')->insert([
             'name' => 'Cerulean',
             'cdn_url' => 'https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css',
-            'created_by' => '1',
+            'created_by' => '3',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -23,7 +23,7 @@ class ThemesTableSeeder extends Seeder
         DB::table('themes')->insert([
             'name' => 'Cosmo',
             'cdn_url' => 'https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cosmo/bootstrap.min.css',
-            'created_by' => '1',
+            'created_by' => '3',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -31,7 +31,7 @@ class ThemesTableSeeder extends Seeder
         DB::table('themes')->insert([
             'name' => 'Cyborg',
             'cdn_url' => 'https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cyborg/bootstrap.min.css',
-            'created_by' => '1',
+            'created_by' => '3',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
