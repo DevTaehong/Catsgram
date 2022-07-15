@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Trying to fix a migration issue" />
+    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Trying to fix a migration issue 2">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -234,7 +239,7 @@
       <workItem from="1657746572003" duration="390000" />
       <workItem from="1657746981511" duration="191000" />
       <workItem from="1657747190809" duration="375000" />
-      <workItem from="1657747599578" duration="35935000" />
+      <workItem from="1657747599578" duration="37076000" />
     </task>
     <task id="LOCAL-00001" summary="Changing minor issues">
       <created>1657308095422</created>
@@ -439,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657847273939</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Trying to fix a migration issue 2">
+      <created>1657848153389</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1657848153389</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,6 +507,7 @@
     <MESSAGE value="Changing Procfile" />
     <MESSAGE value="Changing Procfile to fix a migration issue on Heroku" />
     <MESSAGE value="Trying to fix a migration issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix a migration issue" />
+    <MESSAGE value="Trying to fix a migration issue 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix a migration issue 2" />
   </component>
 </project>

@@ -42,10 +42,9 @@ class HomeController extends Controller
 
         $id = Auth::id();
         $roleId = DB::table('role_user')->where('id', $id)->get();
-        $moderatorId = DB::table('roles')->where('id', 2)->get();
+        $moderatorId = DB::table('roles')->where('id', 14)->get();
 
         $themes = Theme::all();
-
 
 //        $value = $request->cookie('name3');
         $value = $request->cdn_url;
