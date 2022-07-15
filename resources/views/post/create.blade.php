@@ -8,7 +8,8 @@
                     <div class="card-header">Create New Post</div>
 
                     <div class="card-body">
-                        <form action="/posts" method="post">
+{{--                      Source:  https://stackoverflow.com/questions/58091302/input-type-file-returns-empty-in-laravel-php--}}
+                        <form action="/posts" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="title">Post Title</label>
@@ -24,6 +25,14 @@
                                 <input name="content" type="text" class="form-control" id="content" aria-describedby="contentHelp" placeholder="(Required) Enter content">
 
                                 @error('content')
+                                <small class="text-danger">{{ $message }}</small>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="image">Image</label>
+                                <input name="image" type="file" accept="image/*" class="form-control" id="image" aria-describedby="imageHelp" placeholder="Upload an image">
+                                @error('image')
                                 <small class="text-danger">{{ $message }}</small>
                                 @enderror
                             </div>

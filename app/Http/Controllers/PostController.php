@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -37,13 +38,19 @@ class PostController extends Controller
     {
         $data = request()->validate([
             'title' => 'required',
-            'content' => 'required'
+            'content' => 'required',
+            'image' => 'image|mimes:jpg,png,jpeg|max:10240'
         ]);
 
+        if(array_key_exists('image', $data)){
+            $fileName = Auth::id() . "-" . $data['image']->getClientOriginalName();
+
+            //Move an image that the user uploads in public/images directory
+            $data['image']->move('images', $fileName);
+            $data['image'] = $fileName;
+        }
         $data['created_by'] = auth()->user()->id;
         Post::create($data);
-
-
         return redirect('/home');
     }
 
@@ -68,10 +75,25 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        $post->update(request()->validate([
+        $data = request()->validate([
             'title' => 'required',
-            'content' => 'required'
-        ]));
+            'content' => 'required',
+            'image' => 'image|mimes:jpg,png,jpeg|max:10240'
+        ]);
+
+        if(array_key_exists('image', $data)){
+            $fileName = Auth::id() . "-" . $data['image']->getClientOriginalName();
+
+            //Move an image that the user uploads in public/images directory
+            $data['image']->move('images', $fileName);
+            $data['image'] = $fileName;
+            $post->image = $fileName;
+        }
+
+        $post->title = $data['title'];
+        $post->content = $data['content'];
+
+        $post->save();
 
         return redirect('/home');
     }
