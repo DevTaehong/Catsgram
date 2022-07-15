@@ -1,7 +1,11 @@
 @foreach($comments as $comment)
     <div class="col-md">
-        <div class="display-comment" @if($comment->parent_id != null) style="margin-left:40px;" @endif>
-            <p><strong>{{ $comment->user->name }} </strong>{{ $comment->body }}</p>
+        <div class="display-comment">
+            <p style="margin-bottom: 0em"><strong>{{ $comment->user->name }} </strong>{{ $comment->body }}</p>
+            <small class="mt-1">
+                {{ \Carbon\Carbon::parse($comment->created_at)->diffForHumans() }}
+            </small>
+            @if(Auth::user())
             <a href="" id="reply"></a>
             <form method="post" action="{{ route('comments.store') }}">
                 @csrf
@@ -10,13 +14,17 @@
                     <input type="hidden" name="post_id" value="{{ $post_id }}" />
                     <input type="hidden" name="parent_id" value="{{ $comment->id }}" />
                 </div>
-                <div class="form-group">
                     <input type="submit" class="btn btn-warning" value="Reply" />
-                </div>
-
-                <hr />
             </form>
+            @if($comment->user_id == $id)
+                <form action="/comments/{{ $comment->id }}" method="post">
+                    @method('DELETE')
+                    @csrf
+                    <input type="submit" class="btn btn-danger" value="Delete" />
+                </form>
+            @endif
             @include('post.commentsDisplay', ['comments' => $comment->replies])
+            @endif
         </div>
     </div>
 @endforeach
