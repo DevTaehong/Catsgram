@@ -17,7 +17,7 @@ class CreateThemesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('cdn_url');
-            $table->unsignedBigInteger('created_by');
+            $table->bigIncrements('created_by');
             $table->unsignedBigInteger('updated_by')->nullable();
             $table->unsignedBigInteger('deleted_by')->nullable();
             $table->timestamps();
