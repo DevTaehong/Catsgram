@@ -31,6 +31,8 @@ Route::group(['middleware' => 'IsAdmin'], function () {
 
 
 Route::resource('/themes', 'ThemeController');
+Route::post("/themes/set/{theme}", "ThemeController@set");
+
 Route::resource('/users', 'UserController');
 
 Route::get('/admin/users', 'UserController@index');
@@ -47,3 +49,4 @@ Route::delete('/posts/{post}/', 'PostController@destroy');
 
 Route::post('/comments/store', 'CommentController@store');
 Route::resource('/comments', 'CommentController');
+
