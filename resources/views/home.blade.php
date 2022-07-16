@@ -24,7 +24,7 @@
                         <div class="card m-3">
                             <div class="card-header">{{ $post->title }}</div>
                             @if($post->image != null)
-                                <img class="responsive" src="{{url('/images')}}/{{ $post->image }}" alt="Image"/>
+                                <img class="responsive" src="{{ url('/images') }}/{{ $post->image }}" alt="Image"/>
                             @endif
 
                             @foreach($users as $user)
@@ -33,8 +33,7 @@
                                 @endif
                             @endforeach
                             <small class="ml-3">{{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</small>
-{{--                            Comments --}}
-
+                            {{--Comments --}}
                             <div class="col-md">
                                 <hr />
                                 <h5>Display Comments</h5>

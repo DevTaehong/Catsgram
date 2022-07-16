@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Theme;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 
 class ThemeController extends Controller
 {
@@ -115,12 +116,12 @@ class ThemeController extends Controller
         return redirect('/themes');
     }
 
-    public function assignTheme(Request $request)
-    {
-        if (!session('theme'))
-        {
-            $theme = Theme::where('id', 1)->value('cdn_url');
-            session(['theme' => $theme]);
+    public function set(Theme $theme) {
+        if ($theme->name != "Default") {
+            return redirect()->back()->withCookie("theme", $theme->cdn_url);
+        } else {
+            Cookie::queue(Cookie::forget("theme"));
+            return redirect()->back();
         }
     }
 }

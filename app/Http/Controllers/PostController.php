@@ -43,7 +43,7 @@ class PostController extends Controller
         ]);
 
         if(array_key_exists('image', $data)){
-            $fileName = Auth::id() . "-" . $data['image']->getClientOriginalName();
+            $fileName = $data['image']->getClientOriginalName();
 
             //Move an image that the user uploads in public/images directory
             $data['image']->move('images', $fileName);
@@ -82,7 +82,7 @@ class PostController extends Controller
         ]);
 
         if(array_key_exists('image', $data)){
-            $fileName = Auth::id() . "-" . $data['image']->getClientOriginalName();
+            $fileName = $data['image']->getClientOriginalName();
 
             //Move an image that the user uploads in public/images directory
             $data['image']->move('images', $fileName);

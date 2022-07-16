@@ -20,7 +20,7 @@
                 <form action="/comments/{{ $comment->id }}" method="post">
                     @method('DELETE')
                     @csrf
-                    <input type="submit" class="btn btn-danger" value="Delete" />
+                    <input type="submit" class="btn btn-danger" value="Delete"/>
                 </form>
             @endif
             @include('post.commentsDisplay', ['comments' => $comment->replies])
