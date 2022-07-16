@@ -4,38 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Making responsive images 2">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4e3fd28a-fe19-4dea-9afe-37deb06e2183.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4e3fd28a-fe19-4dea-9afe-37deb06e2183.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/627b3ef3-b979-4d51-9edf-398a9d693325.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/627b3ef3-b979-4d51-9edf-398a9d693325/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/627b3ef3-b979-4d51-9edf-398a9d693325/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/627b3ef3-b979-4d51-9edf-398a9d693325/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/627b3ef3-b979-4d51-9edf-398a9d693325/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Fixing Theme's functionality and uploading images issues">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ThemeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ThemeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_12_06_230506_create_themes_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_12_06_230506_create_themes_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/ThemesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ThemesTableSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/1-nature-image-for-website.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/2-Average grade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/2-Screen Shot 2021-08-01 at 12.14.54 AM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/2-Screen Shot 2022-07-01 at 1.56.42 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/2-Screen Shot 2022-07-12 at 10.17.32 PM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/2-Screen Shot 2022-07-13 at 1.20.45 AM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/2-images.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/24-2.1abouthalifaxnovascotia-header.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/2.1abouthalifaxnovascotia-header.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/3-rsz-simon-migaj-421505-unsplash-1072x568.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/post/commentsDisplay.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/commentsDisplay.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +242,7 @@
       <workItem from="1657907078673" duration="186000" />
       <workItem from="1657907313209" duration="486000" />
       <workItem from="1657908167431" duration="1476000" />
-      <workItem from="1657909770085" duration="17384000" />
+      <workItem from="1657909770085" duration="18534000" />
     </task>
     <task id="LOCAL-00001" summary="Changing minor issues">
       <created>1657308095422</created>
@@ -510,7 +482,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657852505146</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Fixing Theme's functionality and uploading images issues">
+      <created>1657991203827</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1657991203827</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,7 +521,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Changing php version in composer.json" />
     <MESSAGE value="Tyring to fix deployment on heroku" />
     <MESSAGE value="Tyring to fix deployment on heroku 2" />
     <MESSAGE value="Updating php version in composer.json" />
@@ -567,17 +545,7 @@
     <MESSAGE value="Changing favicon" />
     <MESSAGE value="Making responsive images" />
     <MESSAGE value="Making responsive images 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Making responsive images 2" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/layouts/app.blade.php</url>
-          <line>12</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Fixing Theme's functionality and uploading images issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing Theme's functionality and uploading images issues" />
   </component>
 </project>
