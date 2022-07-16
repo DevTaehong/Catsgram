@@ -1,1 +1,3 @@
-<img width="1426" alt="QuotesApp" src="https://user-images.githubusercontent.com/71358207/179369381-94422ec1-87e9-4492-9ae2-4ebcb840b8f8.png">
+Quotes App
+
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/71358207/179369973-c1790385-1140-4577-8aba-4c041aa0ed54.gif)
