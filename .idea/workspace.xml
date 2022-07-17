@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Save image files in database when users upload image files." />
+    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="GD library on Heroku">
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -247,7 +249,7 @@
       <workItem from="1657907313209" duration="486000" />
       <workItem from="1657908167431" duration="1476000" />
       <workItem from="1657909770085" duration="19104000" />
-      <workItem from="1657999863930" duration="17909000" />
+      <workItem from="1657999863930" duration="18284000" />
     </task>
     <task id="LOCAL-00001" summary="Changing minor issues">
       <created>1657308095422</created>
@@ -522,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658033449680</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="GD library on Heroku">
+      <created>1658033953463</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1658033953463</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +563,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updating php version in composer" />
     <MESSAGE value="Upgrading laravel version from 6 to 8" />
     <MESSAGE value="Upgrading php version from 7.4 to 8.1" />
     <MESSAGE value="Fixing a minor issue for heroku development" />
@@ -579,6 +587,7 @@
     <MESSAGE value="Try to fix storage for image on heroku 2" />
     <MESSAGE value="Get rid of unnecessary code" />
     <MESSAGE value="Save image files in database when users upload image files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Save image files in database when users upload image files." />
+    <MESSAGE value="GD library on Heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="GD library on Heroku" />
   </component>
 </project>
