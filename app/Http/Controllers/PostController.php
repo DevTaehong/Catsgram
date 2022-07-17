@@ -5,19 +5,11 @@ namespace App\Http\Controllers;
 use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Response;
+use Intervention\Image\Facades\Image;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -39,18 +31,25 @@ class PostController extends Controller
         $data = request()->validate([
             'title' => 'required',
             'content' => 'required',
-            'image' => 'image|mimes:jpg,png,jpeg|max:10240'
+            'image' => 'image|mimes:jpg,png,jpeg|max:2048'
         ]);
 
-        if(array_key_exists('image', $data)){
-            $fileName = $data['image']->getClientOriginalName();
+        if(array_key_exists('image', $data)) {
+            //Source: https://www.webslesson.info/2020/01/larvel-6-store-retrieve-images-from-mysql-database.html
+            $image_file = $request->image;
+            $image = Image::make($image_file);
+            Response::make($image->encode('jpeg'));
+        } else{ $image = null;}
 
-            //Move an image that the user uploads in public/images directory
-            $data['image']->move('images', $fileName);
-            $data['image'] = $fileName;
-        }
-        $data['created_by'] = auth()->user()->id;
-        Post::create($data);
+        $form_data = array(
+            'title'  => $data['title'],
+            'content' => $data['content'],
+            'image' => $image,
+            'created_by' => Auth::id()
+        );
+
+        Post::create($form_data);
+
         return redirect('/home');
     }
 
@@ -78,20 +77,19 @@ class PostController extends Controller
         $data = request()->validate([
             'title' => 'required',
             'content' => 'required',
-            'image' => 'image|mimes:jpg,png,jpeg|max:10240'
+            'image' => 'image|mimes:jpg,png,jpeg|max:2048'
         ]);
 
-        if(array_key_exists('image', $data)){
-            $fileName = $data['image']->getClientOriginalName();
-
-            //Move an image that the user uploads in public/images directory
-            $data['image']->move('images', $fileName);
-            $data['image'] = $fileName;
-            $post->image = $fileName;
-        }
+        if(array_key_exists('image', $data)) {
+            //Source: https://www.webslesson.info/2020/01/larvel-6-store-retrieve-images-from-mysql-database.html
+            $image_file = $request->image;
+            $image = Image::make($image_file);
+            Response::make($image->encode('jpeg'));
+        } else{ $image = null;}
 
         $post->title = $data['title'];
         $post->content = $data['content'];
+        $post->image = $image;
 
         $post->save();
 

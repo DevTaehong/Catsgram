@@ -17,7 +17,7 @@
 </div>
 
 <div class="form-group">
-    <label for="image">Upload Image</label>
+    <label for="image">Image</label>
     <input name="image" type="file" accept="image/*" class="form-control" id="image" aria-describedby="imageHelp" value="{{ old('image') ?? $post->image }}" autocomplete="off">
     @error('image')
     <small class="text-danger">{{ $message }}</small>

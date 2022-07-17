@@ -14,6 +14,7 @@ class Post extends Model
 
     use Notifiable;
     use SoftDeletes;
+    protected $fillable = ['title','content','image','created_by'];
 
     public function user()
     {
