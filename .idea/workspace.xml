@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Try to fix storage for image on heroku" />
+    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Try to fix storage for image on heroku 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,6 +60,13 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+      </list>
+    </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -239,7 +249,7 @@
       <workItem from="1657907313209" duration="486000" />
       <workItem from="1657908167431" duration="1476000" />
       <workItem from="1657909770085" duration="19104000" />
-      <workItem from="1657999863930" duration="1942000" />
+      <workItem from="1657999863930" duration="5357000" />
     </task>
     <task id="LOCAL-00001" summary="Changing minor issues">
       <created>1657308095422</created>
@@ -493,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658016935472</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Try to fix storage for image on heroku 2">
+      <created>1658017704583</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1658017704583</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +542,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tyring to fix deployment on heroku 2" />
     <MESSAGE value="Updating php version in composer.json" />
     <MESSAGE value="Updating php version in composer.lock" />
     <MESSAGE value="Updating php version in composer" />
@@ -550,6 +566,7 @@
     <MESSAGE value="Making responsive images 2" />
     <MESSAGE value="Fixing Theme's functionality and uploading images issues" />
     <MESSAGE value="Try to fix storage for image on heroku" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try to fix storage for image on heroku" />
+    <MESSAGE value="Try to fix storage for image on heroku 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try to fix storage for image on heroku 2" />
   </component>
 </project>
