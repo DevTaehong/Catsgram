@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Fix respo">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Try to fix storage for image on heroku" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -241,7 +239,7 @@
       <workItem from="1657907313209" duration="486000" />
       <workItem from="1657908167431" duration="1476000" />
       <workItem from="1657909770085" duration="19104000" />
-      <workItem from="1657999863930" duration="1562000" />
+      <workItem from="1657999863930" duration="1942000" />
     </task>
     <task id="LOCAL-00001" summary="Changing minor issues">
       <created>1657308095422</created>
@@ -488,7 +486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657991203827</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Try to fix storage for image on heroku">
+      <created>1658016935472</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1658016935472</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +525,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Tyring to fix deployment on heroku" />
     <MESSAGE value="Tyring to fix deployment on heroku 2" />
     <MESSAGE value="Updating php version in composer.json" />
     <MESSAGE value="Updating php version in composer.lock" />
@@ -545,6 +549,7 @@
     <MESSAGE value="Making responsive images" />
     <MESSAGE value="Making responsive images 2" />
     <MESSAGE value="Fixing Theme's functionality and uploading images issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing Theme's functionality and uploading images issues" />
+    <MESSAGE value="Try to fix storage for image on heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="Try to fix storage for image on heroku" />
   </component>
 </project>
