@@ -10,20 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-//Route::get('/', function () {
-//    return view('welcome');
-//});
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', 'HomeController@index');
 
-
 Auth::routes();
 
-
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home/{id}', 'HomeController@show')->name('home.show');
+Route::get('store_image/fetch_image/{id}', 'HomeController@fetch_image');
 
 Route::group(['middleware' => 'IsAdmin'], function () {
     Route::get('/admin/users', 'UserController@index');
