@@ -4,9 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Try to fix storage for image on heroku 2">
+    <list default="true" id="b5d742b1-740f-4bd3-b87b-37965e90d0e7" name="Changes" comment="Save image files in database when users upload image files.">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6a29f0cb-6304-441b-b874-fde32e0b100b.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6a29f0cb-6304-441b-b874-fde32e0b100b/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6a29f0cb-6304-441b-b874-fde32e0b100b/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6a29f0cb-6304-441b-b874-fde32e0b100b/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/6a29f0cb-6304-441b-b874-fde32e0b100b/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/QuotesApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/QuotesApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_22_015116_create_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_22_015116_create_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/ThemesTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/ThemesTableSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/post/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/post/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +199,7 @@
       <path value="$PROJECT_DIR$/vendor/laravel/serializable-closure" />
       <path value="$PROJECT_DIR$/vendor/league/config" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="ProjectId" id="2Bfa2l6ddoqVqn0PLzf7ONHnCrY" />
@@ -249,7 +268,7 @@
       <workItem from="1657907313209" duration="486000" />
       <workItem from="1657908167431" duration="1476000" />
       <workItem from="1657909770085" duration="19104000" />
-      <workItem from="1657999863930" duration="5357000" />
+      <workItem from="1657999863930" duration="17598000" />
     </task>
     <task id="LOCAL-00001" summary="Changing minor issues">
       <created>1657308095422</created>
@@ -510,7 +529,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658017704583</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Get rid of unnecessary code">
+      <created>1658021403055</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1658021403055</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -542,8 +568,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Updating php version in composer.json" />
-    <MESSAGE value="Updating php version in composer.lock" />
     <MESSAGE value="Updating php version in composer" />
     <MESSAGE value="Upgrading laravel version from 6 to 8" />
     <MESSAGE value="Upgrading php version from 7.4 to 8.1" />
@@ -567,6 +591,8 @@
     <MESSAGE value="Fixing Theme's functionality and uploading images issues" />
     <MESSAGE value="Try to fix storage for image on heroku" />
     <MESSAGE value="Try to fix storage for image on heroku 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Try to fix storage for image on heroku 2" />
+    <MESSAGE value="Get rid of unnecessary code" />
+    <MESSAGE value="Save image files in database when users upload image files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Save image files in database when users upload image files." />
   </component>
 </project>
