@@ -36,6 +36,7 @@ I deployed this application using Heroku and AWS Relational Database Service. Ho
 -	An edit page that allows modifications to an existing theme.
 -	The capability to delete a theme via Soft Deleting
 -	All applicable pages provide basic validation functionality to maintain valid data.
+- A comments feature.
 
 ## Screenshots
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/71358207/179369973-c1790385-1140-4577-8aba-4c041aa0ed54.gif)
