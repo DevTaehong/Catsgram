@@ -17,11 +17,11 @@
 
 ## General Information
 It was my final assignment for web application programming. I received a mark of 100%, with a final course mark of 98%.
-I deployed this application using Heroku and AWS Relational Database Service. However, I could not use AWS RDS anymore because I was using a school account. So, I used ClearDB to build my app using native MySQL databases instead. In class, I used Laravel version 6 and PHP 7 but upgraded Laravel version to 8 and PHP version to 8 after the coursed ended.
+I deployed this application using Heroku and AWS Relational Database Service. However, I could not use AWS RDS anymore because I was using a school account. So, I used ClearDB to build my app using native MySQL databases instead. In class, I used Laravel version 6 and PHP 7 but upgraded Laravel version to 8 and PHP version to 8.1 after the course ended.
 
 ## Technologies Used
 - Laravel - version 8.0
-- PHP - version 8.0
+- PHP - version 8.1
 - MySQL
 - ClearDB
 - Heroku
