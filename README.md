@@ -50,7 +50,7 @@ $ php artisan serve
 ```
 
 ## Project Status
-Project is complete. I am no longer working on it, because I am laerning new technologies such as Node.js, React.js.
+Project is complete. I am no longer working on it, because I am learning new technologies such as Node.js, React.js.
 
 ## Room for Improvement
 If you find a bug, kindly open an issue [here](https://github.com/DevTaehong/QuotesApp/issues/new) by including your search query and the expected result.
