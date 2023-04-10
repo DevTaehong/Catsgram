@@ -1,7 +1,7 @@
 @foreach($comments as $comment)
     <div class="col-md">
         <div class="display-comment">
-            <p style="margin-bottom: 0em"><strong>{{ $comment->user->name }} </strong>{{ $comment->body }}</p>
+            <p style="margin-bottom: 0em"><strong class="font-weight-bold">{{ $comment->user->name }} </strong>{{ $comment->body }}</p>
             <small class="mt-1">
                 {{ \Carbon\Carbon::parse($comment->created_at)->diffForHumans() }}
             </small>
