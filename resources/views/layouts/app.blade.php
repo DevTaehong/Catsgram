@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Catsgram') }}</title>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
@@ -41,37 +41,12 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Catsgram') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <div class="dropdown show">
-                        <a class="nav-link nav-item" role="button" href="#" id="themeDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Themes <span class="caret"> </span>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="themeDropdownLink">
-                            @foreach(\App\Theme::all() as $theme)
-                                @if($theme->cdn_url == request()->cookie('theme'))
-                                    <li class="divider"></li>
-                                    <form action="/themes/set/{{ $theme->id }}" method="post">
-                                        @csrf
-                                        <button class="nav-link nav-item border-0 bg-transparent">{{ $theme->name }}<strong>&check;</strong></button>
-                                    </form>
-                                @else
-                                    <li class="divider"></li>
-                                    <form action="/themes/set/{{ $theme->id }}" method="post">
-                                        @csrf
-                                        <button class="nav-link nav-item border-0 bg-transparent">{{ $theme->name }}
-                                            @if($theme->name == "Default" and !$theme->cdn_url == request()->cookie('theme'))
-                                                <strong>&check;</strong>@endif</button>
-                                    </form>
-                                @endif
-                            @endforeach
-                        </div>
-                    </div>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
@@ -85,15 +60,37 @@
                                 </li>
                             @endif
                         @else
+                            <div class="dropdown show">
+                                <a class="nav-link nav-item text-dark" role="button" href="#" id="themeDropdownLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Themes <span class="caret"> </span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="themeDropdownLink">
+                                    @foreach(\App\Theme::all() as $theme)
+                                        @if($theme->cdn_url == request()->cookie('theme'))
+                                            <li class="divider"></li>
+                                            <form action="/themes/set/{{ $theme->id }}" method="post">
+                                                @csrf
+                                                <button class="nav-link nav-item border-0 bg-transparent">{{ $theme->name }}<strong>&check;</strong></button>
+                                            </form>
+                                        @else
+                                            <li class="divider"></li>
+                                            <form action="/themes/set/{{ $theme->id }}" method="post">
+                                                @csrf
+                                                <button class="nav-link nav-item border-0 bg-transparent">{{ $theme->name }}
+                                                    @if($theme->name == "Default" and !$theme->cdn_url == request()->cookie('theme'))
+                                                        <strong>&check;</strong>@endif</button>
+                                            </form>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </div>
                             {{--Source code: https://stackoverflow.com/questions/30712420/displaying-navbar-according-to-user-roles-and-permisions-laravel--}}
                             @if (Auth::user()->isThemeManager('Theme Manager'))
-                            <li><a class="nav-link" href="/themes">Manage Themes</a></li>
+                                <li><a class="nav-link text-dark" href="/themes">Manage Themes</a></li>
                             @endif
-                            <li><a class="nav-link" href="/home">Posts</a></li>
-                            <li><a class="nav-link" href="/admin/users">Manage Users</a></li>
-
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <li><a class="nav-link text-dark" href="/admin/users">Manage Users</a></li>
+                            <li class="nav-item dropdown text-dark">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-dark" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -103,7 +100,6 @@
                                         document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -121,5 +117,6 @@
         </main>
     </div>
     <script src="{{ mix('/js/app.js') }}"></script>
+    {{-- @yield('script') --}}
 </body>
 </html>

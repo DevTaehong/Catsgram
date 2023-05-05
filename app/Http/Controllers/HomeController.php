@@ -39,7 +39,7 @@ class HomeController extends Controller
     public function index(Post $posts, Request $request)
     {
         $posts = Post::orderBy('created_at', 'desc')->get();
-
+        
         $id = Auth::id();
         $roleId = DB::table('role_user')->where('id', $id)->get();
         $moderatorId = DB::table('roles')->where('id', 14)->get();

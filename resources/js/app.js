@@ -1,2 +1,4 @@
 require('./bootstrap');
-require('./components/Example');
+require('./components/PostImage/PostImage.js');
+require('./components/Profile/Profile.js');
+

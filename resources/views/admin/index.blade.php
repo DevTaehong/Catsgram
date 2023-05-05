@@ -44,13 +44,13 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a class="btn btn-success" href="/admin/users/{{$user->id}}">Show</a>
+                                        <a class="btn btn-outline-primary" href="/admin/users/{{$user->id}}">Show</a>
                                         {{--source code: https://www.youtube.com/watch?v=4D69X8u7WDI&list=PLxFwlLOncxFLxT3ZxYPw7-hCrXhdZHg1W&index=7--}}
-                                        <a class="btn btn-warning" href="{{ route('users.edit',$user->id) }}">Edit</a>
+                                        <a class="btn btn-outline-secondary" href="{{ route('users.edit',$user->id) }}">Edit</a>
                                         <form action="/admin/users/{{ $user->id }}" method="post" style="display: inline">
                                             @method('DELETE')
                                             @csrf
-                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                            <button type="submit" class="btn btn-outline-danger">Delete</button>
                                         </form>
                                     </td>
                                 </tr>
