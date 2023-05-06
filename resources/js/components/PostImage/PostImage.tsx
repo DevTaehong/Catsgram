@@ -2,7 +2,6 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './PostImage.css';
 
-
 function PostImage() {
     return (
         <div className="card">
@@ -20,7 +19,9 @@ function PostImage() {
 export default PostImage;
 
 if (document.getElementById('postImage')) {
-    const container = document.getElementById('postImage');
-    const root = createRoot(container);
-    root.render(<PostImage />);
+    const container: HTMLElement | null = document.getElementById('postImage');
+    if (container) {
+        const root = createRoot(container);
+        root.render(<PostImage />);
+    }
 }
