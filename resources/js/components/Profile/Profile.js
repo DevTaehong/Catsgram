@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client';
 
 
 function Profile({ userName, userEmail, signupDate, editProfile }) {
-    console.log(signupDate);
     return (
         <div className="card">
             <div className="card-body">

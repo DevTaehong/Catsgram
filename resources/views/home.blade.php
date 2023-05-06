@@ -71,7 +71,7 @@
                             <img style="width: 100%; max-width: 100%; height: 80%;" alt="User images"
                                 class="responsive" src="store_image/fetch_image/{{$post->id}}"/>
                         @endif
-                        {{--Comments --}}
+                        {{-- Comments --}}
                         <div class="col-md">
                             <hr />
                             <h5>Comments</h5>
@@ -82,6 +82,8 @@
                         <div class="col-md">
                             <hr />
                         </div>
+
+                        {{-- Comment button --}}
                         @if(Auth::user())
                             <form method="post" action="{{ route('comments.store') }}">
                                 @csrf
@@ -102,7 +104,4 @@
             </div >
         </div >
     @endforeach
-@endsection
-
-@section('scripts')
 @endsection

@@ -2597,7 +2597,6 @@ function Profile(_ref) {
       userEmail = _ref.userEmail,
       signupDate = _ref.signupDate,
       editProfile = _ref.editProfile;
-  console.log(signupDate);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
     className: "card",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
