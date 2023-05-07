@@ -15,7 +15,7 @@
                             {{ $comment->body }}
                         </p>
                     </div>
-                    <div class="d-flex flex-row align-items-center">
+                    <div class="d-flex flex-row justify-content-between">
                         @if(Auth::user())
                             <button type="button" class="d-flex flex-row btn btn-link p-0 text-dark" data-toggle="collapse" 
                                 data-target="#multiCollapse{{ $comment->id }}" aria-expanded="false" aria-controls="multiCollapse{{ $comment->id }}"
@@ -26,11 +26,11 @@
                                 <form action="/comments/{{ $comment->id }}" method="post">
                                     @method('DELETE')
                                     @csrf
-                                    <input type="submit" class="btn btn-link text-dark" value="Delete"/>
+                                    <input type="submit" class="btn btn-link text-dark pt-0" value="Delete"/>
                                 </form>
                             @endif
                         @endif
-                        <div class="ml-auto">
+                        <div>
                             {{ \Carbon\Carbon::parse($comment->created_at)->diffForHumans(null, \Carbon\CarbonInterface::DIFF_ABSOLUTE, true) }}
                         </div>
                     </div>
