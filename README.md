@@ -47,7 +47,7 @@ I deployed this application using Heroku and AWS Relational Database Service. Ho
 - A comments feature.
 
 ## Screenshots
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/71358207/179369973-c1790385-1140-4577-8aba-4c041aa0ed54.gif)
+![catsgram2](https://user-images.githubusercontent.com/71358207/236655000-34d72397-7966-45d0-9ba8-2d3f4b3401fd.gif)
 
 ## Setup
 To run this project make a .env file in the root of this project and in the ternimal, type:
