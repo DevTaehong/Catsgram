@@ -1,4 +1,4 @@
 require('./bootstrap');
-require('./components/PostImage/PostImage.tsx');
-require('./components/Profile/Profile.tsx');
+require('./components/PostImage.tsx');
+require('./components/Profile.tsx');
 

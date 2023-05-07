@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card-body"
+  >
+    <h5
+      className="card-title"
+    >
+      <a
+        className="text-dark"
+        href="/admin/users/null"
+        rel="noopener noreferrer"
+      >
+        Taehong
+      </a>
+    </h5>
+    <h6
+      className="card-subtitle mb-2 text-muted"
+    >
+      minth1123@icloud.com
+    </h6>
+    <h6
+      className="card-subtitle mb-2 text-muted"
+    >
+      Joined Today
+    </h6>
+  </div>
+</div>
+`;

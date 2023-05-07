@@ -1,5 +1,5 @@
 @extends('layouts.app')
-
+<link rel="stylesheet" href="{{ URL::asset('css/postImage.css') }}">
 @section('content')
     @foreach($posts as $post)
         <div class="container">

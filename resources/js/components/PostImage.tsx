@@ -1,6 +1,5 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import './PostImage.css';
 
 function PostImage() {
     return (
