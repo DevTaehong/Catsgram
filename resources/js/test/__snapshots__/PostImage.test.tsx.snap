@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="card"
+>
+  <div>
+    <a
+      href="posts/create"
+    >
+      <button
+        className="create-post"
+        type="submit"
+      >
+        <span
+          className="create-button-title"
+        >
+          Upload your cat!
+        </span>
+      </button>
+    </a>
+  </div>
+</div>
+`;

@@ -1,0 +1,21 @@
+.create-post {
+    font-size: 1.1rem;
+    max-width: none;
+    border: 1px solid #ffffff;
+    border-radius: 18px !important;
+    width: -webkit-fill-available;
+    margin: 11px 15px;
+    background-color: #eaeaea;
+    height: 3rem;
+}
+
+.create-post:hover {
+    background-color: #b1b1b19e;
+}
+
+.create-button-title {
+    color: #706f6fbd;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 1rem;
+}

@@ -170,7 +170,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        CloudinaryLabs\CloudinaryLaravel\CloudinaryServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -233,6 +233,7 @@ return [
         'IsAdmin' => IsAdmin::class,
         'isThemeManager' => isThemeManager::class,
         'Image'     => Intervention\Image\Facades\Image::class,
+        'Cloudinary' => CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary::class,
     ],
 
 ];

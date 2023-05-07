@@ -8,11 +8,8 @@
                     <div class="card-header">Edit Post</div>
                     <div class="card-body">
                         <form action="/posts/{{ $post->id }}" method="post" enctype="multipart/form-data">
-
                             @method('PATCH')
-
                             @include('post.form')
-
                             <a href="/home" class="btn btn-danger">Cancel</a>
                             <button type="submit" class="btn btn-success">Submit</button>
                         </form>
