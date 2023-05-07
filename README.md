@@ -3,7 +3,7 @@
 > Live demo [_here_](https://catsgram.herokuapp.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
-* [General Info](#general-information)
+<!-- * [General Info](#general-information)-->
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Screenshots](#screenshots)
@@ -13,11 +13,11 @@
 * [Contact](#contact)
 <!-- * [License](#license) -->
 
-
+<!--
 ## General Information
 It was my final assignment for web application programming. I received a mark of 100%, with a final course mark of 98%.
 I deployed this application using Heroku and AWS Relational Database Service. However, I could not use AWS RDS anymore because I was using a school account. So, I used ClearDB to build my app using native MySQL databases instead. In class, I used Laravel version 6 and PHP 7 but upgraded Laravel version to 8 and PHP version to 8.1 and added image uploading, comments functionalities, and a third party API to detect cat's images after the course ended.
-
+-->
 ## Technologies Used
 - React - version 18.2.0
 - TypeScript - version 5.0.4
