@@ -1,5 +1,5 @@
 # Catsgram
-> A web application where detects whether an image uploaded by a user contains a picture of a cat. In an administrative back-end area, a website's basic structure (i.e., users, posts, themes) can be dynamically created and modified by only authorized users with the appropriate permissions. The front-end site will be viewable by all users including guests, but users can register and on subsequent visits log in in order to be able to contribute and make some changes to feed content.
+> This platform only allows users to upload pictures of cats. It utilizes a third-party API that exclusively identifies images of felines. In an administrative back-end area, a website's basic structure (i.e., users, posts, themes) can be dynamically created and modified by only authorized users with the appropriate permissions. The front-end site will be viewable by all users including guests, but users can register and on subsequent visits log in in order to be able to contribute and make some changes to feed content.
 > Live demo [_here_](https://catsgram.herokuapp.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
