@@ -9,14 +9,14 @@
                 <div class="row justify-content-center">    
             @endif   
                 @if(\Illuminate\Support\Facades\Auth::check())
-                    <div id="profile" class="col-3 w-25" userName="{{Auth::user()->name}}" 
+                    <div id="profile" class="col-md-3 w-25 d-none d-md-block" userName="{{Auth::user()->name}}" 
                         userEmail="{{Auth::user()->email}}"
                         signupDate="{{\Carbon\Carbon::parse(Auth::user()->created_at)->diffForHumans()}}"
                         editProfile="{{ Auth::user()->id }}"
                     >
                     </div>
                 @endif 
-                <div class="col-6">
+                <div class="col-md-6">
                     @if(\Illuminate\Support\Facades\Auth::check())
                         <div id="postImage" class="mb-2"></div>
                     @endif 
