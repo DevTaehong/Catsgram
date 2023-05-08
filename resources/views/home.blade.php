@@ -18,9 +18,9 @@
                 @endif 
                 <div class="col-md-6">
                     @if(\Illuminate\Support\Facades\Auth::check())
-                        <div id="postImage" class="mb-2"></div>
+                        <div id="postImage"></div>
                     @endif 
-                    <div class="rounded-4 card shadow-sm">
+                    <div class="rounded-4 card shadow-sm mt-2">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
                                 {{ session('status') }}
