@@ -17,20 +17,20 @@
                     </div>
                     <div class="d-flex flex-row justify-content-between">
                         @if(Auth::user())
-                            <button type="button" class="d-flex flex-row btn btn-link p-0 text-dark" data-toggle="collapse" 
+                            <button type="button" class="d-flex flex-row btn btn-link p-0 text-dark border-0" data-toggle="collapse" 
                                 data-target="#multiCollapse{{ $comment->id }}" aria-expanded="false" aria-controls="multiCollapse{{ $comment->id }}"
                             >
                                 Reply
                             </button>
                             @if($comment->user_id == $id)
-                                <form action="/comments/{{ $comment->id }}" method="post">
+                                <form action="/comments/{{ $comment->id }}" method="post"">
                                     @method('DELETE')
                                     @csrf
-                                    <input type="submit" class="btn btn-link text-dark pt-0" value="Delete"/>
+                                    <input type="submit" class="btn btn-link text-dark pt-0 border-0" value="Delete"/>
                                 </form>
                             @endif
                         @endif
-                        <div>
+                        <div class="d-flex flex-row text-dark">
                             {{ \Carbon\Carbon::parse($comment->created_at)->diffForHumans(null, \Carbon\CarbonInterface::DIFF_ABSOLUTE, true) }}
                         </div>
                     </div>
